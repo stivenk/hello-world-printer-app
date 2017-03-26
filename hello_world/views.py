@@ -3,8 +3,8 @@ from formater import get_formatted
 from formater import SUPPORTED, PLAIN
 from flask import request
 
-moje_imie = "Wojtek"
-msg = "Hello World!"
+moje_imie = "Mac"
+msg = "cos tam"
 
 @app.route('/')
 def index():
