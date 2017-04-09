@@ -84,3 +84,4 @@ Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+nowa linia

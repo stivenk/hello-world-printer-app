@@ -5,7 +5,12 @@ deps:
 lint:
 	flake8 hello_world test
 docker_build:
-	docker build  -t hello-world-printer .
+	docker build -t hello-world-printer .
+test:
+	PYTHONPATH=. py.test --verbose -s
+
+docker_build:
+	docker build -t hello-world-printer
 
 docker_run: docker_build
 	docker run \
@@ -13,10 +18,11 @@ docker_run: docker_build
 	-p 5000:5000 \
 	-d hello-world-printer
 
-USERNAME=stivenk
-TAG=$ (USERNAME) /hello-world-printer
+USERNAME=stefankob
+TAG=$(USERNAME)/hello-world-printer
+
 docker_push:
-	docker login --username $(stefankob) --password $(polska89) ; \
-	docker tag hello-world-printer $ (TAG); \
+	@docker login --username $(USERNAME) --password $(PASSWORD); \
+	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
