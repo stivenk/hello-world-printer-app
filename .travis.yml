@@ -10,3 +10,7 @@ script:
 after_success:
 - make docker_build
 - PASSWORD=${DOCKER_PASSWORD} make docker_push
+deploy:
+        provider: heroku
+        app: hello-world
+        api-key: $(HEROKU_API_KEY)
