@@ -5,7 +5,7 @@ deps:
 lint:
 	flake8 hello_world test
 docker_build:
-	docker build  -t .hello-world-printer .
+	docker build  -t hello-world-printer .
 
 docker_run: docker_build
 	docker run \
@@ -13,10 +13,10 @@ docker_run: docker_build
 	-p 5000:5000 \
 	-d hello-world-printer
 
-USERNAME=maciejwsb
+USERNAME=stivenk
 TAG=$ (USERNAME) /hello-world-printer
 docker_push:
-	docker login --username $(maciejwsb) --password $(m12345a) ; \
+	docker login --username $(stefankob) --password $(polska89) ; \
 	docker tag hello-world-printer $ (TAG); \
 	docker push $(TAG); \
 	docker logout;
