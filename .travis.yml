@@ -13,4 +13,4 @@ after_success:
 deploy:
   - provider: heroku
   - app: hello-world
-  - api_key:${HEROKU_API_KEY}
+  - api_key: ${HEROKU_API_KEY}
