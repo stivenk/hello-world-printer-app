@@ -5,6 +5,8 @@ pipeline {
             steps {
 	            sh 'make deps'
 	            sh 'make test'
+		    sh 'make test_cov'
+		    sh 'make test_xunit'	
         	}
         }
     }
