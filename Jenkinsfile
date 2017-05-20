@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-	            sh 'make test_with_cov || true'
+	            sh 'make test_xunit || true'
 		    step([$class: 'XUnitBuilder;,
 			thresholds: [
 				[$class: 'SkippedThreshold', failureThreshold: '0'],
