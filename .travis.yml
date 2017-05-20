@@ -16,3 +16,6 @@ deploy:
   - app: hello-world
   - api_key: ${HEROKU_API_KEY}
 
+notifications:
+        on_success: never
+        on_failure: never
