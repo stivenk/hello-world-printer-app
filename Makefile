@@ -30,5 +30,5 @@ docker_push:
 test_cov:
 	PYTHONPATH=. py.test -s --cov=. --cov-report xml
 test_xunit:
-	PYTHONPATH=. py.test -s --cov=. --covreport xml \
+	PYTHONPATH=. py.test -s --cov=. --cov-report xml \
 		--junit-xml=test_results.xml
