@@ -31,4 +31,4 @@ test_cov:
 	PYTHONPATH=. py.test -s --cov=. --cov-report xml
 test_xunit:
 	PYTHONPATH=. py.test -s --cov=. --covreport xml \
-		--junit-xml=tet_results.xml
+		--junit-xml=test_results.xml
